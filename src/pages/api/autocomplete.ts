@@ -27,4 +27,6 @@ export default async function handler(
 
   const chatCompletion: OpenAI.Chat.ChatCompletion =
     await openai.chat.completions.create(params);
+
+  res.json(chatCompletion.choices);
 }
