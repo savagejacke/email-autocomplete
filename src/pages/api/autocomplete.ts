@@ -5,8 +5,9 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  if (!req.body.email) {
-    res.status(400).json({ message: "Include and email" });
+  if (!req.query.email) {
+    res.status(400).json({ message: "Include an email" });
+    return;
   }
 
   const openai = new OpenAI({
@@ -17,7 +18,7 @@ export default async function handler(
     messages: [
       {
         role: "user",
-        content: "Give me a way to complete this email: " + req.body.email,
+        content: "Give me a way to complete this email: " + req.query.email,
       },
     ],
     model: "gpt-3.5-turbo",
