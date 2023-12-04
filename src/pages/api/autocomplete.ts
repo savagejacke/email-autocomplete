@@ -17,16 +17,16 @@ export default async function handler(
     messages: [
       {
         role: "user",
-        content:
-          "Give me three ways to complete this sentence in an email: " +
-          req.body.email,
+        content: "Give me a way to complete this email: " + req.body.email,
       },
     ],
     model: "gpt-3.5-turbo",
+    n: 3,
   };
-
   const chatCompletion: OpenAI.Chat.ChatCompletion =
     await openai.chat.completions.create(params);
 
-  res.json(chatCompletion.choices);
+  const result = chatCompletion.choices.map((choice) => choice.message);
+
+  res.json(result);
 }
