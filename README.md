@@ -1,40 +1,23 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Complete the Email
 
-## Getting Started
+This was the mini-project for Jan Arvik and Jack Savage in CS 4804 at Virginia
+Tech
 
-First, run the development server:
+## Setup
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Node.js version 18+ is required to run the project (it was created using v20.10.0).
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+After cloning the repo, run `npm install` to install all npm dependecies
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Create a .env file with an API_KEY
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Usage
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Run `npm run dev` to start the project, then navigate to [http://localhost:3000](http://localhost:3000)
+to use the app.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Type you email into the text box, then when you're ready to generate suggestions,
+click on the "Generate options" button and wait for it to generate. Once there
+are autocompletions available, you can click the "accept" button on any of them
+to apply that autocompletion to your email. If you wish to return to what you had
+originally typed, then you will be able to click the "undo" button to do so.
